@@ -1,0 +1,792 @@
+/* Importar la fuente Roboto desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --color-principal: black;
+    --color-secundario: rgb(209, 54, 57);
+    --color-texto: white;
+    --color-texto-footer: #8a8887;
+    --color-fondo-footer:#272626;
+    --color-transparent:rgba(255, 0, 0, 0);
+    --color-preguntas: rgb(209, 208, 208);
+    --color-rojo:rgb(225, 43, 46);
+    --color-fondo-header:#05050577;
+    
+}
+
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+/* Estilos generales para el cuerpo del documento */
+body {
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+/*---HEADER---*/
+
+/* Estilos para la sección hero en el encabezado */
+.hero {
+    background-image: url(img/tryndamere.png);
+    background-size: cover;
+    background-position: center;
+    height: 83vh;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    padding: 20px 23px !important;
+}
+
+/*Color para el svg*/
+.navbar path{
+    fill:var(--color-texto);
+}
+/*hover de color para el svg*/
+.navbar #logo-svg:hover path{
+    fill: var(--color-secundario);
+}
+
+/* Estilos para la marca y los enlaces de navegación */
+.navbar-brand, .nav-link {
+    color: var(--color-texto) !important;
+}
+
+
+/* Estilos al pasar el ratón sobre los enlaces de navegación */
+.nav-link:hover{
+    border-bottom: solid 4px var(--color-secundario);
+    background-color: rgba(128, 128, 128, 0.2);
+    border-radius: 5px;
+}
+
+#logo-svg{
+    margin-right: 2vw;
+}
+
+.nav-item{
+    margin:0 18px !important;
+}
+
+/* Estilos al pasar el ratón sobre la marca de navegación */
+.navbar-brand:hover {
+    color: var(--color-secundario) !important;
+}
+
+nav.navbar {
+    position: fixed;
+    right: 0;
+    left: 0;
+    background-color: var(--color-fondo-header);
+    z-index: 100;
+}
+
+/* Estilos al pasar el ratón sobre elementos de menú desplegable */
+.dropdown-item:hover {
+    background-color: rgb(203, 202, 202) !important;
+}
+
+/* Estilos para el botón de sesión */
+#button-session {
+    color: var(--color-principal);
+    background-color: var(--color-secundario);
+    border: var(--color-texto);
+    width: 150px;
+    border-radius: 50px;
+}
+
+#button-session:hover {
+    
+    background-color: var(--color-rojo);
+    
+}
+
+/* Estilos para el control de formulario */
+.form-control {
+    background-color: var(--color-tranparent) !important;
+    border-radius: 50px !important;
+    width: 150px !important;
+}
+
+/* Estilos para el texto de marcador de posición en el formulario */
+.form-control::placeholder {
+    color: var(--color-texto) !important;
+}
+
+/* Estilos para el campo de búsqueda y el botón de búsqueda */
+#search-input {
+    background-color: var(--color-tranparent) !important;
+    border: none;
+    width: 5vw !important;
+}
+
+#search-button {
+    background-color: var(--color-tranparent) !important;
+    border: none;
+    padding: 0;
+    margin-left: 20px;
+}
+
+/* Estilos para el marcador de posición en el campo de búsqueda */
+#search-input::placeholder {
+    color: var(--color-texto) !important;
+}
+
+/* Estilos para el contenedor de la temporada */
+.temporada-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45vw;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Estilos para la imagen de la temporada */
+#temporada-img {
+    width: 400px;
+    margin-bottom: 30px; 
+}
+
+/* Estilos para texto grande y pequeño en la temporada */
+#temporada-texto-grande {
+    font-size: 2em;
+}
+
+#temporada-texto-pequeño {
+    font-size: 1.25em;
+}
+
+/* Estilos para el botón de cinemática */
+#cinematica-boton {
+    margin-top: 30px;
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(315deg, #0bc4e2 0, #2c8cc2 100%);
+    box-shadow: 0 10px 45px -10px rgba(11, 196, 226, .15), 0 0 20px -10px rgba(11, 196, 226, .35), 0 10px 30px -10px rgba(11, 196, 226, .25);
+    background: linear-gradient(315deg, #0bc4e2 0, #2c8cc2 100%);
+    height: 75px;
+    width: 250px;
+}
+
+/* Estilos al pasar el ratón sobre el botón de cinemática */
+#cinematica-boton:hover {
+    box-shadow: 0 10px 30px -10px rgba(11, 196, 226, .25), 0 10px 30px -10px rgba(11, 196, 226, .5), 0 10px 35px -10px rgba(11, 196, 226, .5);
+}
+
+/* Estilos para el enlace dentro del botón de cinemática */
+#cinematica-boton a {
+    font-size: 2em;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* Estilos para el color del enlace visitado dentro del botón de cinemática */
+#cinematica-boton a:visited {
+    color: var(--color-texto)
+}
+
+/* Estilos para un ícono temático */
+.themed-icon-button__icon {
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--color-principal);
+    margin-right: 1rem;
+    transition: .2s ease-out;
+    filter: drop-shadow(0 4px 3px rgba(10, 10, 10, .4));
+    width: 45px;
+    height: 45px;
+    line-height: 32px;
+}
+
+
+
+
+
+
+
+
+
+/*SECCION NOTICIAS ACTUALIDAD*/
+
+
+/* Contenedor principal de la sección actualidad */
+.actualidad {
+    background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(11, 196, 226, 0.2) 0, rgba(10, 10, 10, 0) 75%, rgba(10, 10, 10, 0) 100%);
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+    padding: 80px !important;
+}
+
+/* Estilos para el título de la sección actualidad */
+.actualidad-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0 60px 0;
+}
+
+/* Estilos para el titulo de la seccion */
+.actualidad-title h1 {
+    font-size: 3em;
+}
+
+/* Estilos para el botón "Ver Todo" */
+#button-vertodo {
+    background-color: rgba(128, 128, 128, 0.2);
+    color: var(--color-texto);
+    border: none;
+    border-radius: 5px;
+}
+
+/* Estilos para el enlace de  "Ver Todo" */
+#button-vertodo a {
+    color: var(--color-texto);
+    text-decoration: none;
+    padding: 5px;
+}
+
+/* Estilos para las imágenes pequeñas de noticias */
+.img-actualidad-pequeñas {
+    width: 220px;
+    height: 125px;
+    border-radius: 10px;
+}
+
+/* Estilos para las noticias pequeñas */
+.noticia-pequeña {
+    background-color: rgba(128, 128, 128, 0.2);
+    box-shadow: 0 4px 4px rgba(10, 10, 10, 0.15);
+    border-radius: 10px;
+    transition: 0.3s ease-in;
+    width: 540px;
+}
+/* Hover para noticias pequeñas */
+.noticia-pequeña:hover {
+    margin-left: 10px !important;
+    box-shadow: 0 0 28px 0 rgba(22, 178, 216, 0.07);
+}
+
+/* Estilos para la disposición de las noticias en filas */
+.row {
+    justify-content: space-between;
+}
+
+/* Estilos para conjuntos pequeños y grandes de noticias */
+.conjunto-pequeño {
+    width: 34.5vw !important;
+}
+
+.conjunto-grande {
+    width: 52vw !important;
+    height: 25vw !important;
+    padding: 0 !important;
+}
+
+/* Estilos para las imágenes y contenido en conjuntos grandes */
+.conjunto-grande img {
+    width: 52vw !important;
+    height: 27vw !important;
+    border-radius: 10px;
+    transition: 0.3s ease-in;
+}
+/* Estilos para el contenido de conjunto grande */
+.conjunto-grande .content {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: xx-large;
+}
+/* Hover para la imagen grande */
+.conjunto-grande div:hover img {
+    transform: scale(1.05);
+}
+
+.conjunto-grande div {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Estilos para columnas de tamaño md-12 */
+.col-md-12 {
+    padding: 0 !important;
+    transition: 0.3s ease-out;
+}
+
+/* Estilos para el contenido de las noticias pequeñas */
+.noticia-pequeña .content {
+    margin-left: 25px;
+    margin-right: 70px;
+    font-weight: bolder;
+    font-size: large;
+}
+
+/* Estilos para un icono temático pequeño */
+.themed-icon-button__icon-small {
+    width: 30px;
+    height: 30px;
+    background-color: #141212;
+    border-radius: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+/* Tamaño de los svg */
+.themed-icon-button__icon-small svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Estilos para la categoría de noticias */
+.categoria {
+    display: flex;
+    align-items: center;
+    font-size: medium;
+    color: rgba(101, 100, 98, 0.9);
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    column-gap: 0.5rem;
+}
+
+
+
+/*SOBRE NOSOTROS*/
+
+
+/* Estilos para imágenes de juegos */
+.juegos-img img {
+    width: 43vw;
+    height: 19vw;
+    border-radius: 10px;
+    margin: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Contenedor para imágenes de juegos */
+.juegos-img {
+    border-radius: 15px;
+    margin: 3px;
+}
+
+/* Efectos al pasar el ratón sobre las imágenes de juegos */
+.juegos-img div:hover img {
+    border: solid rgba(255, 255, 255, 0.492);
+    transform: scale(1.02);
+}
+
+/* Estilos para columnas con tamaño col-xxl-auto dentro de la clase col */
+.col .col-xxl-auto {
+    flex: 0 0 0% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Estilos para centrar las filas */
+.row-center {
+    justify-content: center;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Estilos para la sección "Sobre nosotros" - primera instancia de h1 */
+.sobre-nosotros .first-h1 {
+    padding-left: 80px;
+    color: var(--color-texto);
+    padding-top: 110px;
+    padding-bottom: 60px;
+    font-size: 3em;
+}
+
+/* Estilos para la sección "Sobre nosotros" - h1 */
+.sobre-nosotros h1 {
+    padding-left: 80px;
+    color: var(--color-texto);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 3em;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*CARRUSEL*/
+
+/* Estilos para imágenes dentro de elementos con clase carousel-item */
+.carousel-item img {
+    width: 43vw;
+    height: 19vw;
+    border-radius: 10px;
+    margin-left: 28vw;
+    transition: all 0.3s ease;
+}
+
+/* Efectos al pasar el ratón sobre las imágenes dentro de carousel-item */
+.carousel-item img:hover {
+    border: solid rgba(255, 255, 255, 0.492);
+}
+
+/* Estilos específicos para la clase riot-forge */
+.riot-forge {
+    padding-bottom: 100px;
+}
+
+/* Estilos para la sección preguntas frecuentes */
+.preguntas-frecuentes {
+    background-color: var(--color-preguntas);
+}
+
+/* Estilos para los artículos dentro de preguntas-frecuentes */
+.preguntas-frecuentes-article {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para el título h1 dentro de preguntas-frecuentes */
+.preguntas-frecuentes h1 {
+    padding-left: 80px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    font-size: 3em;
+}
+
+/* Estilos para el componente de acordeón */
+.accordion {
+    margin: 50px;
+    width: 70%;
+}
+
+/* Estilos para los elementos de acordeón */
+.accordion-item {
+    background-color: #626060 !important;
+    color: var(--color-texto) !important;
+}
+
+/* Estilos para los botones de acordeón */
+.accordion-button {
+    background-color: #464545 !important;
+    color: var(--color-texto) !important;
+}
+
+/* Estilos para el foco del botón de acordeón */
+.accordion-button:focus {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Estilos para el cuerpo del acordeón */
+.accordion-body {
+    font-size: small;
+}
+
+
+
+
+/*FOOTER*/
+
+/* Estilos principales para el pie de página */
+footer {
+    background-color: var(--color-fondo-footer);
+    color: var(--color-texto);
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos para la lista del pie de página */
+.footer-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+
+/* Estilos para los iconos en la lista del pie de página */
+.footer-list path {
+    fill: var(--color-texto-footer);
+}
+
+/* Efecto al pasar el ratón sobre los iconos en la lista del pie de página */
+.footer-list path:hover {
+    fill: var(--color-secundario);
+}
+
+/* Estilos para los elementos li del pie de página */
+footer ul li {
+    margin: 0 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los iconos generales */
+.iconos {
+    margin: 0 10px;
+    color: var(--color-texto-footer);
+}
+
+/* Efecto al pasar el ratón sobre los iconos */
+.iconos:hover {
+    color: var(--color-secundario);
+}
+
+/* Estilos para el primer icono con un margen izquierdo específico */
+#primer-icono {
+    margin-left: 100px;
+}
+
+/* Estilos para los enlaces dentro de los elementos li del pie de página */
+footer ul li a {
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--color-texto-footer);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+/* Efecto al pasar el ratón sobre los enlaces */
+footer a:hover {
+    color: var(--color-secundario);
+}
+
+/* Estilos para la línea horizontal */
+hr {
+    margin-left: 30px !important;
+    margin-right: 30px !important;
+}
+
+/* Estilos para el subpie de página */
+.sub-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--color-texto-footer);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+/* Estilos para los enlaces dentro del subpie de página */
+.sub-footer a {
+    text-decoration: none;
+    color: var(--color-texto-footer);
+}
+
+
+
+  @media only screen and (max-width: 1342px) {
+
+   
+    .noticia-pequeña {
+        width: 450px;
+    }
+}
+
+
+
+@media only screen and (max-width: 1210px) {
+
+   
+    .conjunto-grande {
+        width: 90vw !important;
+        height: 25vw !important;
+        padding: 0 !important;
+        margin-bottom:300px ;
+    }
+    .conjunto-grande img {
+        width: 88vw !important;
+        height: 40vw !important;
+        border-radius: 10px;
+        transition: 0.3s ease-in;
+    }
+
+    .noticia-pequeña {
+        width: 500px;
+    }
+
+    .nav-item{
+        margin:0 5px !important;
+    }
+}
+
+
+@media only screen and (max-width: 991px) {
+
+   
+    .temporada-container {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .separated-nav-items{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+
+    }
+    .form-control{
+        margin-bottom: 10px;
+    }
+    .idiomas{
+       display: none !important;
+    }
+
+    .juegos-img img {
+        width: 80vw;
+        height: 35vw;
+        border-radius: 10px;
+        margin: 3px;
+        transition: all 0.3s ease;
+    }
+
+    .carousel-item img {
+        width: 80vw;
+        height: 35vw;
+        border-radius: 10px;
+        margin-left: 10vw;
+        transition: all 0.3s ease;
+    }
+
+    .sub-footer{
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .unic-column{
+        display: flex;
+        flex-direction: column;
+      }
+}
+
+
+
+
+@media only screen and (max-width: 586px) {
+
+    
+
+    #cinematica-boton {
+        height: 60px;
+        width: 180px;
+    }
+
+    #cinematica-boton a{
+        font-size: 1.25em;
+    }
+
+    .themed-icon-button__icon {
+
+        width: 35px;
+        height: 35px;
+    }
+
+    #temporada-img {
+        width: 250px;
+        margin-bottom: 30px; 
+    }
+    
+    /* Estilos para texto grande y pequeño en la temporada */
+    #temporada-texto-grande {
+        font-size: 1.5em;
+    }
+    
+    #temporada-texto-pequeño {
+        font-size: 1em;
+    }
+
+    .conjunto-grande .content {
+        margin-top: 10px;
+        font-weight: 700;
+        font-size: large;
+    }
+
+    .conjunto-grande {
+        margin-bottom:200px ;
+    }
+
+   
+    .img-actualidad-pequeñas {
+        width: 190px;
+        height: 100px;
+        border-radius: 10px;
+    }
+    .noticia-pequeña {
+        width: 300px;
+    }
+    .noticia-pequeña .content{
+        font-size:x-small !important;
+        margin-right: 20px;
+    }
+
+    .noticia-pequeña .categoria span{
+        font-size:xx-small !important;
+    }
+
+    .sobre-nosotros h1 {
+        text-align: center;
+        padding-left: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 2em;
+    }
+
+    .sobre-nosotros .first-h1 {
+        padding-left: 0;
+        padding-top: 60px;
+        padding-bottom: 30px;
+        font-size: 2em;
+    }
+
+    .preguntas-frecuentes h1 {
+        text-align: center;
+        padding-left: 0px;
+        padding-top: 60px;
+        padding-bottom: 30px;
+        font-size: 2em;
+    }
+    .actualidad{
+        padding: 20px !important;
+    }
+
+    .actualidad-title h1 {
+        font-size: 2em;
+    }
+
+    .footer-list {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
+      }
+
+      #primer-icono{
+        margin: 0 20px;
+        
+      }
+      
+    
+}

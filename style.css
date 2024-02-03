@@ -187,6 +187,9 @@ nav.navbar {
 #cinematica-boton a:visited {
     color: var(--color-texto)
 }
+#cinematica-boton a:link {
+    color: var(--color-texto)
+}
 
 /* Estilos para un ícono temático */
 .themed-icon-button__icon {
